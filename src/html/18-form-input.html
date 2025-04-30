@@ -41,6 +41,12 @@
       <!-- email: 이메일 입력 서식 -->
       <div><label for="userEmail">이메일</label><input required type="email" name="userEmail" id="userEmail" /></div>
 
+      <!-- WAI-ARIA 이메일 방식 -->
+      <div>
+        <span id="userEmail-1">이메일</span>
+        <input type="email" name="userEmail-1" aria-labelledby="userEmail-1" />
+      </div>
+
       <!-- checkbox -->
       <!-- 값을 넣으면, ex) name: html 이렇게 값이 나오는거임. 이름은 html이다 -->
       <div>
