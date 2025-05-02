@@ -1,0 +1,48 @@
+@import '/src/common/mini-reset.css';
+html {
+  font-size: 10px;
+
+  /* @media (width > 600px) {
+    font-size: 20px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 30px;
+  } */
+}
+
+/* 타이포그래피 및 단위 */
+
+/* 글자 크기 */
+.lion {
+  font-size: 20px;
+}
+
+/* em 단위는 배수(현재 글자크기 비례). */
+/* 아래는 like 클래스의 부모상자의 1.5배 */
+.like {
+  font-size: 1.5em;
+}
+
+/* rem. root(html)를 기준으로 계산 */
+.bootcamp {
+  font-size: 20px;
+
+  .like {
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+}
+
+/* vw. viewport를 기준으로 계산 */
+.school {
+  font-weight: 700;
+
+  .like {
+    font-size: 5vw;
+    color: lightblue;
+
+    em {
+      font-style: oblique;
+    }
+  }
+}
