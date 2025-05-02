@@ -1,0 +1,55 @@
+/* 배경 스타일 */
+body {
+  /* rgba 방식 */
+  background-color: rgba(255, 255, 180, 0.8);
+  background-image:
+    url('/src/assets/images/sun.png'), url('/src/assets/images/cloud.png'),
+    url('/src/assets/images/tree.png');
+  /* 앞의꺼는 첫번째 이미지, 뒤에꺼는 두번째 이미지 */
+  background-repeat: no-repeat /*, repeat */;
+  background-position:
+    200px 150px,
+    50px 150px,
+    50px 200px;
+  background-size:
+    100px,
+    auto,
+    300px 500px;
+  background-attachment: fixed;
+}
+
+h1 {
+  /* rgb 함수로 투명도 적용 */
+  padding: 5px 100px;
+  font-size: 20px;
+  background-color: rgb(255 160 255 / 0.7);
+  background-image: url('/src/assets/thumbnail/new.png');
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  /* background size 'contain'은 부모상자 세로크기에 맞추고
+  'cover'은 가로크기 */
+  background-size: contain;
+}
+
+a {
+  display: inline-block;
+  border: 1px solid currentColor;
+  padding: 10px 20px;
+  /* hsla 방법. a값은 스킵가능 */
+  /* background-color: hsla(110, 50%, 50%, 0.5);
+  background-image: url('/src/assets/thumbnail/external-link.png');
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: 14px;
+  background-attachment: fixed; */
+
+  /* 위의 효과들 아래처럼 한번에 적용하기 */
+  background: hsla(110, 50%, 50%, 0.5)
+    url('/src/assets/thumbnail/external-link.png') no-repeat 0 50% /14px;
+
+  /* 이미지 두개 시 색상은 맨 뒤에 써야함*/
+  /* background:
+    url('/src/assets/thumbnail/external-link.png') no-repeat 0 50% /14px,
+    url('/src/assets/thumbnail/new.png') no-repeat 0 50% /14px,
+    hsla(110, 50%, 50%, 0.5); */
+}
