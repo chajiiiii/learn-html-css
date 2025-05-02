@@ -1,0 +1,50 @@
+/* 박스 모델 */
+
+/* block box */
+
+/* border styling */
+/* padding. 안쪽 여백 */
+.lion {
+  box-sizing: border-box;
+  /* border box는 content+padding+border를 다 합친 치수에서 계산 */
+  background-color: #ffc;
+  border: 1px solid #333;
+  padding: 10px;
+  width: 500px;
+
+  span {
+    background-color: #fcf;
+    display: block;
+    /* em은 부모의 font-size 기준 배수임 */
+    width: 5em;
+  }
+}
+
+.like {
+  background-color: #ccc;
+  display: inline;
+  /* inline box는 width와 같은 크기를 직접 설정 x */
+  width: 5em;
+}
+
+/* inline block box */
+.bootcamp {
+  background-color: #cfc;
+  display: inline-block;
+  width: 300px;
+}
+
+/* margin. 바깥쪽 여백 */
+.school {
+  border: 1px solid orange;
+  margin: 10px;
+}
+
+/* overflow 속성을 활용한 스타일링 */
+.techit {
+  border: 1px solid lightseagreen;
+  padding: 10px;
+  margin: 10px;
+  height: 120px;
+  overflow: auto;
+}
