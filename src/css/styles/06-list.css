@@ -1,0 +1,17 @@
+/* list */
+.bootcamp {
+  background-color: #ffc;
+
+  ul {
+    list-style-type: circle;
+    list-style-position: inside;
+    list-style-image: url('/src/assets/thumbnail/new.png');
+  }
+}
+
+.likelion {
+  ol {
+    /* 이미지가 안나오는 환경에서는 'upper-roman'속성을 대신 넣는 방법 */
+    list-style: upper-roman url('/src/assets/thumbnail/new.png');
+  }
+}
