@@ -1,0 +1,86 @@
+/* float layout */
+/* body {
+  margin: 50px;
+}
+
+.top-brand-section {
+  width: 1280px;
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.top-brand-item {
+  width: 228px;
+  height: 128px;
+}
+
+img {
+  background: rgb(235, 235, 235);
+  border-radius: 0.625rem;
+}
+
+a {
+  font-size: 12px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+} */
+
+/* 쌤꺼 */
+.top-brand-item {
+  div {
+    background: #ccc;
+    border-radius: 0.5rem;
+    /* text-align: center; 는 자식요소가 inline일 경우에만 작용됨 */
+  }
+
+  img {
+    /* auto margin 방법 */
+    margin-inline: auto;
+  }
+
+  figcaption {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+}
+
+.top-brand-section {
+  width: 1300px;
+
+  h2 {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #303033;
+  }
+
+  span[lang] {
+    display: block;
+    color: #000;
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+
+  ul {
+    display: flow-root;
+    margin-top: 16px;
+
+    li {
+      width: 228px;
+      float: left;
+      margin-top: 12px;
+      margin-right: 40px;
+    }
+
+    li:nth-child(5n) {
+      margin-right: 0;
+    }
+  }
+}
