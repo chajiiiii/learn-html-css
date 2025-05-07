@@ -1,0 +1,52 @@
+/* CSS Position */
+
+/* relative 값 */
+/* 요소 박스의 원래 위치를 기준으로 배치 */
+/* p.lion:nth-of-type(2) {
+  border: 1px solid cornflowerblue;
+  background-color: rgb(255 255 80 /0.5);
+  position: relative;
+  left: 100px;
+  top: 50px;
+} */
+
+.like {
+  background-color: #000;
+  padding: 10px;
+
+  p {
+    border: 1px solid cornflowerblue;
+    background-color: rgb(255 255 80 /1);
+    position: relative;
+    bottom: 20px;
+    right: 10px;
+  }
+}
+
+/* fixed */
+/* 뷰포트 기준으로 배치됨 */
+h1 {
+  background-color: pink;
+  position: fixed;
+  /* -> 가로, 세로 따로 지정 안할 시 
+  태그 안의 컨텐츠 내용을 기준으로 자동으로 설정됨 */
+  right: 50px;
+  bottom: 50px;
+}
+
+/* absolute */
+/* 자신의 컨테이닝 블록을 기준으로 배치 */
+/* 부모컨테이너가 static이면 안쳐줌 */
+/* 그래서 컨테이닝 블록에 relative(또는 absolute or fixed)를 줘서 쓸 수 있음 */
+.bootcamp {
+  border: 1px solid blue;
+  position: relative;
+
+  span {
+    background-color: rgb(100 255 30 /0.5);
+    border: 1px solid red;
+    position: absolute;
+    top: 20px;
+    left: 0;
+  }
+}
