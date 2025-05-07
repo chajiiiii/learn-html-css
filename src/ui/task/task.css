@@ -1,0 +1,54 @@
+ul {
+  width: 332px;
+  margin: auto;
+  display: flow-root;
+
+  li {
+    box-shadow: 0 0 4px rgb(208, 208, 208);
+    border-radius: 0.5rem;
+    padding: 20px;
+    height: 84px;
+    margin: 0.5rem;
+
+    img {
+      float: left;
+      position: relative;
+      top: 0.5rem;
+    }
+
+    .text-box {
+      height: 2.6875rem;
+      padding-left: 2.5rem;
+    }
+
+    h3 {
+      color: inherit;
+      font-size: 1.125rem;
+      margin-bottom: 0.25rem;
+      font-weight: 500;
+    }
+
+    .message {
+      font-size: 0.875rem;
+      color: #9b9a90;
+    }
+
+    .time {
+      font-size: 0.6875rem;
+      position: relative;
+      float: right;
+      right: 2px;
+      top: -23px;
+      color: inherit;
+      font-weight: 500;
+    }
+  }
+
+  li:nth-child(2n-1) .text-box {
+    color: #22be61;
+  }
+
+  li:nth-child(2n) .text-box {
+    color: #e39042;
+  }
+}
