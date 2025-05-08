@@ -1,0 +1,80 @@
+body {
+  margin: 50px;
+}
+
+/* without interaction */
+.avatar-img {
+  --size: 100px;
+  width: var(--size);
+  position: relative;
+
+  img {
+    border-radius: 50%;
+  }
+
+  .status {
+    width: 25%;
+    aspect-ratio: 1/1;
+    background: var(--grey);
+    border-radius: 50%;
+    border: 2px solid var(--white);
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+
+    &.is-active {
+      background: green;
+    }
+  }
+}
+
+/* with interaction */
+.avatar-button {
+  --size: 80px;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  width: var(--size);
+  position: relative;
+
+  img {
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: '';
+    width: 25%;
+    aspect-ratio: 1/1;
+    background-color: var(--grey);
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+  }
+
+  &.is-active::after {
+    background: green;
+  }
+}
+
+/* list */
+.avatars-list {
+  border: 1px solid var(--grey);
+  padding: 26px 40px;
+
+  ul {
+    width: 380px;
+    margin: 0 auto;
+    display: flow-root;
+  }
+
+  li {
+    margin: 10px 0 10px 20px;
+    float: left;
+
+    &:nth-child(4n + 1) {
+      margin-left: 0;
+    }
+  }
+}

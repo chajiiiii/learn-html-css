@@ -9,7 +9,7 @@
   --green: #c8e6c9; /* 파스텔 그린 */
   --purple: #d1c4e9; /* 파스텔 퍼플 */
   --orange: #ffccbc; /* 파스텔 오렌지 */
-  --gray: #cfd8dc; /* 파스텔 그레이 */
+  --grey: #cfd8dc; /* 파스텔 그레이 */
   --peach: #ffe5b4; /* 파스텔 피치 */
   --lilac: #c8a2c8; /* 파스텔 라일락 */
   --teal: #afeeee; /* 파스텔 틸 */
@@ -21,4 +21,7 @@
   --apricot: #fdd5b1; /* 파스텔 애프리콧 */
   --ivory: #fffff0; /* 파스텔 아이보리 */
   --dark-blue: #4a6ee0; /* 파스텔 다크블루 */
+
+  --black: #121212;
+  --white: #fff;
 }
