@@ -1,0 +1,45 @@
+/* 스크롤 없는 100% 레이아웃 */
+html,
+body {
+  block-size: 100%;
+}
+
+.container {
+  background: lightgoldenrodyellow;
+  block-size: 100%;
+  display: flex;
+  flex-flow: column wrap;
+
+  .wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    flex-grow: 1;
+
+    /* 스크롤바를 숨기는 방법 */
+    /* but 숨길 시 콘텐츠 일부가 보이지 않는 경우가 생길 수 있음 */
+    overflow: hidden;
+  }
+
+  .header,
+  .navigation,
+  .sidebar,
+  .main-content,
+  .footer {
+    /* inline-size: 100%; */
+    padding: 1em;
+  }
+
+  .header {
+    background: lightcoral;
+  }
+
+  .sidebar {
+    inline-size: 250px;
+    background: pink;
+  }
+
+  .main-content {
+    background: lightblue;
+    flex-grow: 1;
+  }
+}
