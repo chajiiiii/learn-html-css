@@ -1,0 +1,40 @@
+body {
+  margin: 50px;
+}
+
+.lion {
+  writing-mode: horizontal-tb;
+  background: var(--yellow);
+  /* width 속성의 논리 속성 - inline-size */
+  /* width 대신 inline-size를 쓰면 writing mode를 다르게 써도 크기가 고정됨 */
+  inline-size: 500px;
+  /* hegith 속성의 논리 속성 - block-size */
+  block-size: 300px;
+  border-block: 1px solid red;
+}
+
+/* inset */
+.like {
+  background: var(--coral);
+  border-block-start: 1px solid green;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  inset-block-start: 40px;
+  inset-inline-end: 40px;
+  inset: 80px 80px auto auto;
+}
+
+/* block-start, inline-start, start, end */
+.bootcamp {
+  background: var(--green);
+  border-block: 1px solid blue;
+  text-align: right;
+  text-align: end;
+
+  span {
+    background-color: var(--coral);
+    float: right;
+    float: inline-end;
+  }
+}
