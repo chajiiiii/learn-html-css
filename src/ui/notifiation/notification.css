@@ -1,9 +1,18 @@
+@property --point-color {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #22be61;
+}
+
 body {
   margin: 50px;
 }
-/* 알림 Notification */
+
+/* 알림 Notification 컴포넌트*/
 .notification {
-  border: 1px solid #9b9a90;
+  --base-color: #9b9a90;
+
+  border: 1px solid var(--base-color, #9b9a90);
   border-radius: 0.5rem;
   padding: 20px;
   display: flex;
@@ -11,6 +20,7 @@ body {
   align-items: center;
   column-gap: 20px;
   min-inline-size: 260px;
+  color: var(--point-color);
 
   svg {
     flex-shrink: 0;
@@ -24,19 +34,45 @@ body {
     row-gap: 4px;
 
     strong {
-      color: #22be61;
       font-size: 1.125rem;
     }
 
     time {
-      color: #22be61;
       font-size: 11px;
     }
 
     p {
-      color: #9b9a90;
+      color: var(--base-color, #9b9a90);
       font-size: 0.875rem;
       inline-size: 100%;
+    }
+  }
+}
+
+/* 알림 notification list */
+.notification-list {
+  --gap: 30px;
+
+  display: flex;
+  flex-flow: row wrap;
+  gap: var(--gap);
+
+  /* notification-list(부모 컨테이너)가 flex이고 notification 각 자식아이템에 플렉스효과들을 줬다가 li tag로 자식아이템들을 wrapping을 해버리면 li를 플렉스효과를 줘야하는 자식요소로 보고 효과들이 다 깨져버림. 
+  그래서 display: contents를 줘서 li가 notification-list의 자식이 아니라
+  li의 자식요소인 notification이 notification-list의 직접자식요소 라고 만들어주는 코드임 */
+  li {
+    display: contents;
+  }
+
+  .notification {
+    width: 100%;
+
+    @media (width >= 600px) {
+      width: calc(50% - (var(--gap) / 2));
+    }
+
+    @media (width >= 1280px) {
+      width: calc(25% - (var(--gap) * 3 / 4));
     }
   }
 }
