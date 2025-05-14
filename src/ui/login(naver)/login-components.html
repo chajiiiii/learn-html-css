@@ -55,6 +55,23 @@
         />
       </svg>
     </a>
+
+    <h3>입력 서식</h3>
+    <div class="form-input">
+      <label for="input-1" class="sr-only">레이블</label>
+      <input
+        aria-errormessage="error-1"
+        type="email"
+        id="input-1"
+        name="input-name"
+        required
+        placeholder="플레이스 홀더 텍스트"
+      />
+      <p class="error-message" id="error-1" aria-live="polite">
+        에러 메시지를 입력해주세요.
+      </p>
+    </div>
+
     <h3>Checkbox(배경 이미지 활용)</h3>
     <div class="form-checkbox bg-icon">
       <input type="checkbox" id="checkbox-0" name="checkbox-name" /><label
@@ -62,6 +79,7 @@
         >레이블</label
       >
     </div>
+
     <h3>Checkbox(svg 활용)</h3>
     <div class="form-checkbox svg-icon">
       <input type="checkbox" id="checkbox-1" name="checkbox-name" /><label
@@ -91,10 +109,12 @@
         >레이블</label
       >
     </div>
+
     <h3>Text Link(new tab)</h3>
     <a class="textlink-new" href="/" target="_blank" rel="noopenner noreferrer"
       >링크 텍스트</a
     >
+
     <h3>Switch(checkbox)</h3>
     <div class="form-switch">
       <input type="checkbox" id="switch-0" name="switch-name" /><label
