@@ -1,0 +1,49 @@
+body {
+  margin: 50px;
+  background-color: #000;
+  color: #fff;
+}
+
+.grid-table {
+  border-block: 2px solid #fff;
+  background: #333;
+  margin-block: 1.25rem;
+  font-size: 0.875rem;
+  display: grid;
+  padding: 10px;
+  min-inline-size: 530px;
+  /* column-gap: 12px; */
+
+  /* 열 칸의 최소크기(minmax)를 설정.
+     첫번째 parameter는 최소크기 지정. max-content로 해서 컨텐트의 최대 크기로 설정하여 줄바꿈이 일어나지 않게 함.
+     두번째 parameter는 비율 */
+  grid-template-columns:
+    minmax(max-content, 1fr) minmax(max-content, 3fr)
+    minmax(max-content, 1fr) minmax(max-content, 1fr);
+  grid-template-rows: repeat(3, 48px) auto;
+  /* align-items: center; */
+
+  dt,
+  dd,
+  > div {
+    border-bottom: 1px solid #aaa;
+    align-content: center;
+  }
+
+  dt:last-of-type {
+    /* align-self: start; */
+    margin-block: 10px;
+    border-bottom: 0;
+    align-content: start;
+  }
+
+  > :is(dd, div, ):last-child {
+    grid-area: 4 / 2 / 5 / span 3;
+    border-bottom: 0;
+
+    span {
+      display: block;
+      margin-block: 10px;
+    }
+  }
+}
