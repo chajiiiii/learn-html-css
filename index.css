@@ -1,0 +1,101 @@
+body {
+  margin: 20px;
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(max-content, 1fr));
+  grid-template-rows: auto;
+
+  @media (width >= 1024px) {
+    grid-template-columns: repeat(4, minmax(max-content, 1fr));
+  }
+
+  gap: 20px;
+
+  background: rgb(240, 240, 240);
+}
+
+h1 {
+  grid-area: 1 / 1 / 2 /3;
+  margin: 0 0 0 10px;
+
+  @media (width >= 1024px) {
+    grid-area: 1 / 1 / 2 / 5;
+  }
+
+  span {
+    font-weight: 400;
+    font-size: 1.25rem;
+  }
+}
+
+.container {
+  border-radius: 3px;
+  padding: 12px 20px 20px;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px #ccc;
+  min-width: 214px;
+
+  h2 {
+    margin: 0;
+    padding: 0 0 12px 5px;
+    border-bottom: 2px solid #ccc;
+  }
+
+  ul {
+    display: contents;
+    list-style: none;
+    margin: 0;
+
+    li {
+      padding-left: 5px;
+      margin-bottom: 0.75rem;
+
+      :hover {
+        font-weight: 700;
+      }
+    }
+
+    > li:first-child {
+      padding-top: 0.75rem;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 430;
+      color: rgb(66, 106, 169);
+    }
+  }
+}
+
+footer {
+  grid-area: 4 / 1 / 4 / 3;
+  font-size: 1.25rem;
+
+  align-items: center;
+  text-align: center;
+
+  grid-auto-flow: column;
+
+  @media (width >= 1024px) {
+    grid-area: 3 / 1 / 4 / 5;
+  }
+
+  p {
+    justify-self: center;
+    padding-bottom: 0.25rem;
+    font-size: 12px;
+  }
+
+  .github-link {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+  }
+
+  .github-icon {
+    padding-right: 5px;
+    width: 30px;
+    vertical-align: bottom;
+  }
+}
