@@ -1,0 +1,32 @@
+body {
+  margin: 50px;
+}
+
+.like {
+  border: 5px solid cadetblue;
+  inline-size: 200px;
+  aspect-ratio: 1;
+  background-color: pink;
+  text-align: center;
+  align-content: center;
+
+  transition-property: background, border-radius, inline-size;
+  transition-duration:
+    1000ms /* 1초 */,
+    500ms,
+    1s;
+  transition-delay: 0ms, 1000ms; /* 지정시간 지난 후 효과 시작 */
+  transition-timing-function: linear;
+
+  &:hover {
+    background-color: lightblue;
+    border-radius: 50%;
+    inline-size: 300px;
+  }
+
+  /* &.transition {
+    background-color: green;
+    border-radius: 50%;
+    inline-size: 300px;
+  } */
+}
