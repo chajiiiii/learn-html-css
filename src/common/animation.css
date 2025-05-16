@@ -1,1 +1,75 @@
 /* 애니메이션 관련 CSS */
+
+/* Fade Animation */
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Shrink */
+@keyframes shrink {
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: 50%;
+    font-size: 0.75rem;
+  }
+}
+
+/* Bounce */
+@keyframes bounce {
+  /* 0% {
+    transform: tranlateY(0)
+  };
+  100% {
+    transform: translateY(-20px);
+  } */
+  /* 위의 축약이 아래 */
+  0% {
+    translate: 0;
+  }
+
+  100% {
+    translate: 0 -20px;
+  }
+
+  /* 아래 두 방법은 성능 저하의 문제가 있음 */
+  /* 마진 조절 방법 */
+  /* 0% {
+    margin-top: 15px;
+    margin-bottom: 100px;
+  }
+
+  100% {
+    margin-top: 100px;
+    margin-bottom: 15px;
+  } */
+
+  /* 포지션 방법 */
+  /* 0% {
+    position: relative;
+    top: 0;
+  }
+
+  100% {
+    position: relative;
+    top: -20px;
+  } */
+}
+
+/* Shake */
+@keyframes shake {
+  0% {
+    translate: 0;
+  }
+  100% {
+    translate: -20px 0;
+  }
+}

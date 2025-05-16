@@ -22,19 +22,84 @@ body {
   } */
 }
 
-.like {
+.zoom .target-animation {
   border: 5px solid currentColor;
   padding: 10px;
   width: 100px;
-
   /* animation-name: zoom;
   animation-duration: 5s;
-  animation-iteration-count: 3;
+  animation-iteration-count: 2;
   animation-direction: alternate;
   animation-timing-function: ease-in-out;
-  animation-delay: 3s;
-  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  animation-fill-mode: both;
   animation-play-state: paused; */
-  /* 위의 축약이 아래 */
-  animation: zoom 5s 3s 3 alternate ease-in-out forwards running;
+  animation: zoom 5s 1s 3 alternate ease-in-out forwards paused;
+}
+
+/* 공통 스타일 */
+.case {
+  padding: 10px;
+  margin: 15px 10px;
+  border: 2px solid lightblue;
+  border-radius: 5px;
+  box-shadow: 1px 2px 5px #ccc;
+
+  .target-animation {
+    border-radius: 0.5rem;
+    padding: 1em;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: lightblue;
+    color: var(--white);
+    text-align: center;
+    margin-block: 15px;
+  }
+
+  div {
+    margin: 10px;
+
+    button {
+      background-color: lightblue;
+      border: none;
+      border-radius: 2px;
+      padding: 4px 8px;
+    }
+  }
+}
+
+/* Fade Animation */
+.fade .target-animation {
+  /* animation-name: fade;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; */
+  /* 양방향으로 애니메이션 설정. 아래. */
+  /* animation-direction: alternate; */
+
+  animation: fade 3s infinite alternate linear;
+  animation-play-state: paused;
+
+  /* animation: fade 3s infinite ease-in-out forwards; */
+}
+
+/* Shrink Animation */
+.shrink .target-animation {
+  /* name, duration, iteration, function */
+  animation: shrink 2s infinite ease-in-out;
+  animation-play-state: paused;
+}
+
+/* Bounce Animation */
+.bounce .target-animation {
+  /* name, duration, iteration, direction, function */
+  animation: bounce 2s infinite alternate ease-in-out;
+  animation-play-state: paused;
+}
+
+/* Shake Animation */
+.shake .target-animation {
+  /* name, duration, iteration, direction, function */
+  animation: shake 2s infinite alternate ease-in-out;
+  animation-play-state: paused;
 }
