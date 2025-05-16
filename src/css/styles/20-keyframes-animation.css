@@ -1,0 +1,40 @@
+body {
+  margin: 50px;
+}
+
+/* keyframe */
+@keyframes zoom {
+  /* 시작점 */
+  from {
+    width: 100px;
+    background-color: lightblue;
+  }
+
+  100% {
+    width: 200px;
+    background-color: pink;
+  }
+
+  /* 끝나는점 */
+  /* to {
+    width: 100px;
+    background-color: yellow;
+  } */
+}
+
+.like {
+  border: 5px solid currentColor;
+  padding: 10px;
+  width: 100px;
+
+  /* animation-name: zoom;
+  animation-duration: 5s;
+  animation-iteration-count: 3;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused; */
+  /* 위의 축약이 아래 */
+  animation: zoom 5s 3s 3 alternate ease-in-out forwards running;
+}
