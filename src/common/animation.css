@@ -83,3 +83,13 @@
     rotate: 360deg;
   }
 }
+
+/* Pulse */
+@keyframes pulse {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 1.1;
+  }
+}

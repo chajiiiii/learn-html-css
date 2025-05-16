@@ -123,3 +123,10 @@ body {
   animation: spin 1s infinite linear;
   animation-play-state: paused;
 }
+
+/* Pulse Animation */
+.pulse .target-animation {
+  /* name, duration, iteration, direction, function */
+  animation: pulse 1s infinite alternate ease-in-out;
+  animation-play-state: paused;
+}
