@@ -144,3 +144,53 @@ body {
   animation: wobble 1s infinite alternate ease-in-out;
   animation-play-state: paused;
 }
+
+/* CSS 변수 활용 Animation */
+.rotate .target-animation {
+  --rotation: 0deg;
+
+  inline-size: 120px;
+  aspect-ratio: 1;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+
+    /* background: conic-gradient(
+      from var(--rotation),
+      red 0 10%,
+      transparent 10% 100%
+    ); */
+
+    background: conic-gradient(
+      from var(--rotation),
+      pink,
+      lightblue,
+      hotpink,
+      violet,
+      pink,
+      ivory,
+      hotpink,
+      pink
+    );
+
+    z-index: -1;
+    padding: 5px;
+    inline-size: 100%;
+    block-size: 100%;
+    box-sizing: content-box;
+    translate: -50% -50%;
+    border-radius: 0.5rem;
+
+    animation: rotate 500ms infinite linear;
+    animation-play-state: paused;
+  }
+
+  &::before {
+    filter: blur(0.5rem);
+  }
+}
