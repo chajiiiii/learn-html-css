@@ -130,3 +130,17 @@ body {
   animation: pulse 1s infinite alternate ease-in-out;
   animation-play-state: paused;
 }
+
+/* Flip Animation */
+.flip .target-animation {
+  /* name, duration, iteration, function */
+  animation: flip 1s infinite alternate ease-in-out;
+  animation-play-state: paused;
+}
+
+/* Wobble Animation */
+.wobble .target-animation {
+  /* name, duration, iteration, function */
+  animation: wobble 1s infinite alternate ease-in-out;
+  animation-play-state: paused;
+}
