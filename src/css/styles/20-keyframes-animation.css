@@ -54,6 +54,7 @@ body {
     color: var(--white);
     text-align: center;
     margin-block: 15px;
+    align-content: center;
   }
 
   div {
@@ -101,5 +102,24 @@ body {
 .shake .target-animation {
   /* name, duration, iteration, direction, function */
   animation: shake 2s infinite alternate ease-in-out;
+  animation-play-state: paused;
+}
+
+/* Spin Animation */
+.spin .target-animation {
+  width: 120px;
+  aspect-ratio: 1;
+  background: conic-gradient(
+    pink,
+    lightblue,
+    hotpink,
+    violet,
+    pink,
+    ivory,
+    hotpink,
+    pink
+  );
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
   animation-play-state: paused;
 }
