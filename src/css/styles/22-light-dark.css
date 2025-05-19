@@ -6,6 +6,7 @@
 body {
   margin: 50px;
   background-color: goldenrod;
+  /* light-dark 함수 사용 */
   color: light-dark(green, red);
 
   /* Media Query - Dark Mode */
