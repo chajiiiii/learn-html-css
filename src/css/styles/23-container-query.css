@@ -2,6 +2,55 @@ body {
   margin: 50px;
 }
 
+/* 카드 */
+.card-wrapper {
+  container-type: inline-size;
+
+  .card {
+    background: #f9f9f9;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid gray;
+
+    @container (width >=480px) {
+      flex-direction: row;
+    }
+
+    img {
+      inline-size: 100%;
+      aspect-ratio: 3/2;
+      object-fit: cover;
+    }
+
+    figcaption {
+      text-align: center;
+      font-style: italic;
+      margin-block-start: 8px;
+      font-weight: 600;
+    }
+
+    p {
+      line-height: 1.5;
+      text-align: justify;
+      color: gray;
+    }
+  }
+}
+
+/* grid layout */
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  .card-wrapper:nth-child(n + 5) {
+    grid-column: span 2;
+  }
+}
+
+/*  */
+/* 미디어 쿼리 컨트롤 */
 .range-control {
   margin-bottom: 20px;
 }
