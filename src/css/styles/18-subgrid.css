@@ -1,0 +1,93 @@
+body {
+  margin: 50px;
+}
+
+/* Layout */
+.layout {
+  display: grid;
+
+  grid-template-columns:
+  /* 라인번호에 아래 대괄호처럼 이름(맘대로)을 정해줄 수 있음 */
+  /* ex) 두번째 컬럼 스타트 라인(2번) 이름을 content-start로. */
+    [full-start] minmax(1rem, 1fr) [content-start] repeat(
+      12,
+      minmax(5.3125rem, 1fr)
+    )
+    [content-end] minmax(1rem, 1fr) [full-end];
+  grid-auto-rows: 50px;
+
+  .header {
+    background: pink;
+
+    grid-column: 3 / span 5;
+  }
+
+  .navigation {
+    background: lightblue;
+
+    /* full-start / full-end; */
+    grid-column: full;
+  }
+
+  .main {
+    background: plum;
+
+    /* content-start / content-end; */
+    grid-column: content;
+  }
+
+  .sidebar {
+    background: orange;
+
+    grid-column: 10 / full-end;
+  }
+
+  .footer {
+    background: turquoise;
+
+    grid-column: content-start / full-end;
+  }
+}
+
+.bootcamp {
+  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: auto auto auto auto;
+
+  .like {
+    border: 2px solid brown;
+    padding: 1em;
+    row-gap: 10px;
+
+    display: grid;
+    grid-template-rows: subgrid;
+    /* 아래 코드 없이는 like의 자식요소가 다 겹쳐서 맨 아래 요소가 위로 나옴 */
+    /* 그래서 like자식 요소 row도 4로 늘려준다고 해야함 */
+    grid-row: span 4;
+
+    img {
+      inline-size: 100%;
+      aspect-ratio: 3/2;
+      object-fit: cover;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      order: -1;
+      word-break: keep-all;
+    }
+
+    p {
+      color: grey;
+    }
+
+    a {
+      display: block;
+      padding: 0.5em 1em;
+      background-color: burlywood;
+      color: white;
+      justify-self: end;
+    }
+  }
+}
