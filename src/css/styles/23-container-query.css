@@ -1,0 +1,45 @@
+body {
+  margin: 50px;
+}
+
+.range-control {
+  margin-bottom: 20px;
+}
+
+.wrapper {
+  border: 1px solid cornflowerblue;
+  padding: 10px;
+  inline-size: 621px;
+
+  /* container type */
+  container-type: inline-size;
+
+  .bootcamp {
+    display: flex;
+    flex-flow: column nowrap;
+
+    @container (width >= 600px) {
+      flex-direction: row;
+
+      div {
+        font-size: 2em;
+        color: white;
+      }
+    }
+
+    div {
+      block-size: 200px;
+      text-align: center;
+      align-content: center;
+      font-weight: 700;
+    }
+
+    .like {
+      background-color: green;
+    }
+
+    .lion {
+      background-color: orange;
+    }
+  }
+}
