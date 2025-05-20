@@ -1,0 +1,82 @@
+body {
+  margin: 50px;
+}
+
+.bootcamp {
+  border: 5px solid rebeccapurple;
+  inline-size: 200px;
+  aspect-ratio: 1;
+  position: relative;
+  background-color: yellow;
+
+  /* lion class 를 bootcamp 컨테이너 안 요소 중 맨 아래로 깔고싶을 때 */
+  isolation: isolate;
+
+  .like,
+  .lion {
+    inline-size: 50%;
+    aspect-ratio: 1;
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    translate: -50% -50%;
+  }
+
+  .like {
+    background-color: lightgreen;
+  }
+
+  .lion {
+    background-color: blue;
+    inline-size: 60%;
+
+    /* lion class 를 bootcamp 컨테이너 안 요소 중 맨 아래로 깔고싶을 때 */
+    z-index: -1;
+  }
+
+  .frontend {
+    inline-size: 100%;
+    block-size: 100%;
+    text-align: center;
+    align-content: center;
+
+    position: absolute;
+  }
+}
+
+/* flex를 이용한 stacking */
+.wrapper {
+  border: 5px solid hotpink;
+  padding: 10px 100px;
+  display: flex;
+  flex-flow: row nowrap;
+
+  div {
+    inline-size: 100px;
+    aspect-ratio: 1;
+    margin-inline-start: -50px; /* 마이너스 마진으로 겹치게 */
+    border-radius: 50%;
+    text-align: center;
+    align-content: center;
+
+    &:hover {
+      z-index: 1;
+    }
+  }
+
+  .box1 {
+    background-color: gold;
+  }
+
+  .box2 {
+    background-color: pink;
+  }
+
+  .box3 {
+    background-color: skyblue;
+  }
+
+  .box4 {
+    background-color: lightsalmon;
+  }
+}
