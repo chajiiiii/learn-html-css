@@ -1,0 +1,47 @@
+@layer module, state;
+
+h1 {
+  margin-block: 20px;
+}
+
+/* 우선순위: state > module */
+/* !important가 있으면 우선순위가 반대로 바뀜 */
+
+@layer module {
+  body {
+    background-color: lightgoldenrodyellow !important;
+  }
+
+  .alert {
+    background-color: darkblue;
+    padding: 1em;
+    color: white;
+  }
+  p {
+    border: medium solid purple;
+  }
+}
+
+@layer state {
+  body {
+    background-color: pink;
+  }
+
+  .alert {
+    background-color: brown;
+    padding: 1em;
+    color: white;
+  }
+  p {
+    border: medium solid red;
+  }
+
+  h1 {
+    margin-block: 10px;
+  }
+}
+
+body {
+  margin: 50px;
+  background-color: lightgreen;
+}
